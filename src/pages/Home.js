@@ -6,8 +6,6 @@ import data from "../data.js";
 import "./Home.css";
 
 function Home() {
-  console.log(data);
-
   return (
     <div className="App container">
       <Navbar />
@@ -21,10 +19,13 @@ function Home() {
               UI DESIGN | July 2, 2021
             </div>
             <div className="judul my-3 my-xl-4 my-lg-3 h3">
-              Understanding color theory: the color wheel and finding complementary colors
+              Understanding color theory: the color wheel and finding
+              complementary colors
             </div>
             <p className="deskripsi text-secondary">
-              Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
+              Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
+              ullamco cillum dolor. Voluptate exercitation incididunt aliquip
+              deserunt reprehenderit elit laborum.
             </p>
             <div className="user-account d-flex mt-4">
               <div className="avatar">
@@ -53,7 +54,7 @@ function Home() {
                       <img src={el.avatar} alt="" />
                     </div>
                     <div className="name-account ms-3">
-                      <div className="name fs-5">{el.name}</div>
+                      <div className="name fs-5">{el.userName}</div>
                       <div className="job h-6 text-secondary">{el.work}</div>
                     </div>
                   </div>
