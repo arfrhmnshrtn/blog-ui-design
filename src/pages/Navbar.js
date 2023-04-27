@@ -1,21 +1,13 @@
-function inputSearch(e) {
-  const result = e.target;
-  if (result == 'a') {
-    alert('tampil')
-  } else {
-
-    console.log('not found')
-  }
-
-}
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark py-4">
-      <div className="container-fluid">
-        <a className="navbar-brand text-light" href="#">
-          <span className="bg-secondary px-3 py-2 rounded">E</span> Epictetus
-        </a>
+    <nav className="navbar navbar-expand-lg navbar-dark py-3 fixed-top" style={{backgroundColor: '#374151'}}>
+      <div className="container">
+        {/* <a className="navbar-brand text-light" href="#">
+          <span className="bg-secondary px-3 py-2 rounded">E</span> 
+        </a> */}
+        <Link to='/' className="navbar-brand text-light"><span className="bg-secondary px-3 py-2 rounded">E</span> Epictetus</Link> 
         <button
           className="navbar-toggler"
           type="button"
@@ -30,19 +22,13 @@ function Navbar() {
         <div className="collapse navbar-collapse ps-lg-5" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                UI Design
-              </a>
+              <Link to="/uidesign" className="nav-link">Ui Design</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Front-end
-              </a>
+              <Link to="/frontend" className="nav-link">Front-End</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Back-end
-              </a>
+            <Link to="/backend" className="nav-link">Back-End</Link>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -80,7 +66,6 @@ function Navbar() {
           {/* form */}
           <input
             className="bg-transparent rounded border  border-secondary outline-0 p-1 text-light px-2"
-            onChange={inputSearch}
             placeholder="Search"
           />
 

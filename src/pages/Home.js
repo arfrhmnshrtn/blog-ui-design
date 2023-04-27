@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import Navbar from "./Navbar";
 import Gambar1 from "./image/gambar1.png";
 import Avatar1 from "./image/avatar1.svg";
 import data from "../data.js";
@@ -7,8 +5,7 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div className="App container">
-      <Navbar />
+    <div className="App container mt-5 pt-5">
       <div className="container text-center text-light">
         <div className="row">
           <div className="col-lg-8">
