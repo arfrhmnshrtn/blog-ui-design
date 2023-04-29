@@ -2,10 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route, useParams } from "react-router-dom";
 import Home from "./pages/Home";
-import FilterFrontEnd from "./pages/FilterByFrontEnd";
-import FilterUiDesign from "./pages/FilterByUiDesign";
-import FilterBackEnd from "./pages/FilterByBackEnd";
 import Navbar from "./pages/Navbar";
+import Filter from "./pages/Filter";
 
 function getParams() {
   let { params } = useParams;
@@ -18,9 +16,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/frontend" element={<FilterFrontEnd />} />
-        <Route path="/uidesign" element={<FilterUiDesign />} />
-        <Route path="/backend" element={<FilterBackEnd />} />
+        <Route path=":slug" element={<Filter />} />
+        {/* <Route path=":slug" element={<FilterUiDesign />} />
+        <Route path=":slug" element={<FilterBackEnd />} /> */}
       </Routes>
     </div>
   );
